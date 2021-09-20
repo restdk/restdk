@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "lib-ts-template",
+  "description": "a ts lib template",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "init:config": "node ./scripts/init-config.js"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@rollup/plugin-typescript": "^8.2.3",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.3.3",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6",
+    "rollup": "^2.53.2",
+    "ts-jest": "^27.0.3",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5",
+    "@rollup/plugin-node-resolve": "^13.0.2",
+    "rollup-plugin-typescript2": "^0.30.0"
+  }
+}
