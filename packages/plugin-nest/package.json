@@ -1,11 +1,11 @@
 {
-  "name": "@restdk/cli",
-  "version": "0.0.0",
+  "name": "plugin-nest",
+  "version": "1.0.0",
   "description": "> TODO: description",
   "author": "WumaCoder <1829913225@qq.com>",
   "homepage": "https://github.com/restdk/restdk#readme",
   "license": "MIT",
-  "main": "lib/restdk-cli.js",
+  "main": "lib/plugin-nest.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"

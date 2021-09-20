@@ -1,11 +1,11 @@
-# `restdk-core`
+# `core`
 
 > TODO: description
 
 ## Usage
 
 ```
-const restdkCore = require('restdk-core');
+const core = require('core');
 
 // TODO: DEMONSTRATE API
 ```

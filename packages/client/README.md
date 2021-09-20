@@ -1,11 +1,11 @@
-# `restdk-cli`
+# `client`
 
 > TODO: description
 
 ## Usage
 
 ```
-const restdkCli = require('restdk-cli');
+const client = require('client');
 
 // TODO: DEMONSTRATE API
 ```
