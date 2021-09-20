@@ -1,0 +1,29 @@
+{
+  "name": "@restdk/client",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "WumaCoder <1829913225@qq.com>",
+  "homepage": "https://github.com/restdk/restdk#readme",
+  "license": "MIT",
+  "main": "lib/restdk-client.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/restdk/restdk.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/restdk/restdk/issues"
+  }
+}
