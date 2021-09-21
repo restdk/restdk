@@ -2,6 +2,7 @@ import { Method, RequestMethod } from "../../src/core/Method";
 import { Param, ParamType } from "../../src/core/Param";
 import { Return } from "../../src/core/Return";
 import { Model } from "../../src/core/Model";
+import { DtoObject, Property } from "../../src/core/DtoObject";
 
 describe("Model.ts", () => {
   it("create model", () => {
@@ -10,7 +11,29 @@ describe("Model.ts", () => {
         url: "/api",
         name: "App",
         parent: null,
-        dtoObject: [],
+        dtoObject: [
+          DtoObject.create({
+            name: "BodyDto",
+            parent: "User",
+            property: [
+              Property.create({
+                name: "id",
+                type: "number",
+                required: true,
+              }),
+            ],
+          }),
+          DtoObject.create({
+            name: "User",
+            parent: null,
+            property: [
+              Property.create({
+                name: "name",
+                type: "string",
+              }),
+            ],
+          }),
+        ],
         methods: [
           Method.create({
             name: "getUser",
@@ -23,7 +46,34 @@ describe("Model.ts", () => {
       url: "/api",
       name: "App",
       parent: null,
-      dtoObject: [],
+      dtoObject: [
+        {
+          name: "BodyDto",
+          parent: "User",
+          property: [
+            {
+              name: "id",
+              type: "number",
+              required: true,
+              comment: "",
+              default: "",
+            },
+          ],
+        },
+        {
+          name: "User",
+          parent: null,
+          property: [
+            {
+              name: "name",
+              type: "string",
+              required: false,
+              comment: "",
+              default: "",
+            },
+          ],
+        },
+      ],
       methods: [
         {
           name: "getUser",
