@@ -19,6 +19,9 @@
     {
       "name": "📦 @restdk/shared",
       "path": "packages/shared"
+    },
+    {
+      "path": "."
     }
   ],
   "settings": {}
