@@ -10,6 +10,7 @@ describe("Model.ts", () => {
         url: "/api",
         name: "App",
         parent: null,
+        dtoObject: [],
         methods: [
           Method.create({
             name: "getUser",
@@ -22,6 +23,7 @@ describe("Model.ts", () => {
       url: "/api",
       name: "App",
       parent: null,
+      dtoObject: [],
       methods: [
         {
           name: "getUser",
