@@ -6,6 +6,7 @@
   "homepage": "https://github.com/restdk/restdk#readme",
   "license": "MIT",
   "main": "./lib/core.cjs.js",
+  "module": "./lib/core.esm.js",
   "typings": "./types/index.d.ts",
   "directories": {
     "lib": "lib",

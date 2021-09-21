@@ -6,12 +6,12 @@ export default defineConfig({
   input: "./src/index.ts",
   output: [
     {
-      file: "./lib/plugin-nest.cjs.js",
+      file: "./lib/nest.cjs.js",
       format: "cjs",
       sourcemap: true,
     },
     {
-      file: "./lib/plugin-nest.esm.js",
+      file: "./lib/nest.esm.js",
       format: "esm",
       sourcemap: true,
     },
