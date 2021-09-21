@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "name": "📦 @restdk/cli",
+      "path": "packages/cli"
+    },
+    {
+      "name": "📦 @restdk/client",
+      "path": "packages/client"
+    },
+    {
+      "name": "📦 @restdk/core",
+      "path": "packages/core"
+    },
+    {
+      "name": "📦 @restdk/plugin-nest",
+      "path": "packages/plugin-nest"
+    },
+    {
+      "name": "📦 @restdk/shared",
+      "path": "packages/shared"
+    }
+  ],
+  "settings": {}
+}
