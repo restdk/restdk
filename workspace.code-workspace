@@ -1,6 +1,9 @@
 {
   "folders": [
     {
+      "path": "."
+    },
+    {
       "name": "📦 @restdk/cli",
       "path": "packages/cli"
     },
@@ -19,9 +22,6 @@
     {
       "name": "📦 @restdk/shared",
       "path": "packages/shared"
-    },
-    {
-      "path": "."
     }
   ],
   "settings": {},
