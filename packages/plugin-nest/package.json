@@ -1,5 +1,5 @@
 {
-  "name": "plugin-nest",
+  "name": "@restdk/plugin-nest",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "WumaCoder <1829913225@qq.com>",
