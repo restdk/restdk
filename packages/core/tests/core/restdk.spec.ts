@@ -1,9 +1,9 @@
-import { Sdk } from "../../src/core/Sdk";
+import { Restdk } from "../../src/core/Restdk";
 
-describe("Sdk.ts", () => {
-  it("sdk toString ", () => {
+describe("Restdk.ts", () => {
+  it("Restdk toString ", () => {
     expect(
-      Sdk.create({
+      Restdk.create({
         name: "Sdk",
         baseURL: "http://localhost:80/api",
         env: "local",

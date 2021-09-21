@@ -8,7 +8,7 @@ import {
 } from "../helper/inject";
 import { Model } from "./Model";
 
-export class Sdk {
+export class Restdk {
   name: string;
   baseURL: string;
   env: string;
@@ -33,7 +33,7 @@ export class Sdk {
     `;
   }
 
-  static create(props: Partial<Sdk>) {
-    return make(new Sdk(), props);
+  static create(props: Partial<Restdk>): Restdk {
+    return make(new Restdk(), props);
   }
 }

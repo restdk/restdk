@@ -2,9 +2,8 @@
 //
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
-export * from "./generator";
 export * from "./core/Method";
 export * from "./core/Model";
 export * from "./core/Param";
 export * from "./core/Return";
-export * from "./core/Sdk";
+export * from "./core/Restdk";
