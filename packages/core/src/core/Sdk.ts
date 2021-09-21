@@ -16,7 +16,7 @@ export class Sdk {
   models: Model[];
 
   getModelString() {
-    return this.models.map((model) => "export " + model);
+    return this.models.map((model) => "export " + model).join("\n");
   }
 
   toString() {
@@ -29,7 +29,7 @@ export class Sdk {
       ${injectRequest(this)}
       ${injectBaseModel()}
       ${injectTools()}
-      ${this.getModelString().join("\n")}
+      ${this.getModelString()}
     `;
   }
 

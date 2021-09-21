@@ -25,19 +25,17 @@ export class Method {
   }
 
   getArgsString() {
-    return this.params.map((param) => param.toString());
+    return this.params.join(", ");
   }
 
   getRetTypeString() {
-    return this.returns.map((ret) => ret.type);
+    return this.returns.join("|") || "any";
   }
 
   toString() {
     const { param, query, body } = this.getParamMap();
     return `
-  ${this.name}(${this.getArgsString().join(", ")}):${
-      this.getRetTypeString().join("|") || "any"
-    }{
+  ${this.name}(${this.getArgsString()}):${this.getRetTypeString()}{
       return request({
         url:this.getUrl() + "${this.url}",
         method: "${this.requestMethod}",

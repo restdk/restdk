@@ -20,7 +20,7 @@ export class Model {
   }
 
   getMethodString() {
-    return this.methods.map((method) => method).join("\n");
+    return this.methods.join("\n");
   }
 
   getParentString() {
@@ -28,7 +28,7 @@ export class Model {
   }
 
   getDtoObjectString() {
-    return this.dtoObject.map((dto) => dto).join("\n");
+    return this.dtoObject.join("\n");
   }
 
   static create(props: Partial<Model>) {
