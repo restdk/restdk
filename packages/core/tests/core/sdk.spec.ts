@@ -1,5 +1,4 @@
 import { Sdk } from "../../src/core/Sdk";
-import { Model } from "../../src/core/Model";
 
 describe("Sdk.ts", () => {
   it("sdk toString ", () => {

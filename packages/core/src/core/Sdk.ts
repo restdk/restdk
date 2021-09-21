@@ -1,4 +1,11 @@
 import { make } from "@restdk/shared";
+import {
+  injectLib,
+  injectEnv,
+  injectRequest,
+  injectBaseModel,
+  injectTools,
+} from "../helper/inject";
 import { Model } from "./Model";
 
 export class Sdk {
@@ -29,57 +36,4 @@ export class Sdk {
   static create(props: Partial<Sdk>) {
     return make(new Sdk(), props);
   }
-}
-
-function injectBaseModel() {
-  return `
-  class BaseModel{
-    url: string;
-    parent:null|BaseModel;
-
-    getUrl(){
-      return (this.parent ? this.parent.getUrl() : "") + this.url;
-    }
-  }
-  
-  `;
-}
-
-function injectRequest({ baseURL }) {
-  return `
-    const axios = new Axios({baseUrl:"${baseURL}"});
-
-    function request(option){
-      return axios({
-        method: option.method,
-        url: parseUrl(option.url, option.param),
-        data: option.body,
-        params: option.query,
-      });
-    }
-  `;
-}
-
-function injectLib() {
-  return `
-  import Axios from "axios";
-
-  `;
-}
-
-function injectEnv() {
-  return `
-  let env = "local";
-  `;
-}
-
-function injectTools() {
-  return `
-    function parseUrl(url: string, param: any) {
-      return url.replace(/:(\w+)/gim, (_, $1) => {
-        return param[$1];
-      });
-    }
-
-  `;
 }
