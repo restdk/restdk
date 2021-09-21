@@ -1,0 +1,32 @@
+{
+  "name": "@restdk/shared",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "WumaCoder <1829913225@qq.com>",
+  "homepage": "https://github.com/restdk/restdk#readme",
+  "license": "MIT",
+  "main": "lib/shared.cjs.js",
+  "module": "lib/shared.esm.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/restdk/restdk.git"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/restdk/restdk/issues"
+  }
+}
