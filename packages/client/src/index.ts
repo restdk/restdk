@@ -1,5 +1,5 @@
 import Axios from "axios";
-import * as project from "./restdk-api";
+import * as project from "./api-service";
 
 type Project = typeof project;
 type ProjectKeys = keyof Project;
@@ -9,6 +9,19 @@ type ProjectMap = {
 
 export function createRestdk(restdkOption) {
   const axios = Axios.create(restdkOption);
+  axios.interceptors.request.use((config) => {
+    return config;
+  });
+  axios.interceptors.response.use((res) => {
+    if (Math.floor(res.status / 100) !== 2) {
+      throw new Error(res.statusText);
+    }
+    const body = res.data;
+    if (body.code) {
+      //TODO: 抛错管理
+    }
+    return res.data.data;
+  });
   const restdkApiMap = {};
   for (const restdkName in project) {
     const restdkApi = project[restdkName];

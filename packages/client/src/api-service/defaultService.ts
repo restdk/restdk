@@ -6,6 +6,7 @@ export class UserApi extends Api {
   constructor(private request) {
     super();
   }
+
   gets(): Promise<User[]> {
     return this.request({});
   }
