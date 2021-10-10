@@ -1,0 +1,1 @@
+{"version":3,"file":"defaultService.d.ts","sourceRoot":"","sources":["../../src/api-service/defaultService.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,GAAG,EAAE,MAAM,SAAS,CAAC;AAE9B,qBAAa,IAAI;CAAG;AAEpB,qBAAa,OAAQ,SAAQ,GAAG;IAClB,OAAO,CAAC,OAAO;gBAAP,OAAO,KAAA;IAI3B,IAAI,IAAI,OAAO,CAAC,IAAI,EAAE,CAAC;CAGxB;AAED,wBAAgB,cAAc,CAAC,OAAO,KAAA;;EAIrC"}

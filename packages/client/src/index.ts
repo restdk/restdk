@@ -1,4 +1,4 @@
-import Axios from "axios";
+import { Axios } from "axios";
 import * as project from "./api-service";
 
 type Project = typeof project;
@@ -8,7 +8,7 @@ type ProjectMap = {
 };
 
 export function createRestdk(appName: ProjectKeys, restdkOption) {
-  const axios = Axios.create(restdkOption);
+  const axios = new Axios(restdkOption);
   axios.interceptors.request.use((config) => {
     return config;
   });
@@ -16,15 +16,15 @@ export function createRestdk(appName: ProjectKeys, restdkOption) {
     if (Math.floor(res.status / 100) !== 2) {
       throw new Error(res.statusText);
     }
-    const body = res.data;
-    if (body.code) {
+    const body: any = res.data;
+    if (body?.code) {
       //TODO: 抛错管理
     }
-    return res.data.data;
+    return body?.data;
   });
   const restdkApi = project[appName];
   return restdkApi((option) => {
-    return axios({
+    return axios.request({
       method: option.method,
       url: parseUrlParam(option.url, option.param),
       data: option.body,
