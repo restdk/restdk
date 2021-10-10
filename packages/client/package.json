@@ -26,5 +26,8 @@
   },
   "bugs": {
     "url": "https://github.com/restdk/restdk/issues"
+  },
+  "dependencies": {
+    "axios": "^0.22.0"
   }
 }
