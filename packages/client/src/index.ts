@@ -7,7 +7,7 @@ type ProjectMap = {
   [key in ProjectKeys]: ReturnType<Project[key]>;
 };
 
-export function createRestdk(restdkOption) {
+export function createRestdk(appName: ProjectKeys, restdkOption) {
   const axios = Axios.create(restdkOption);
   axios.interceptors.request.use((config) => {
     return config;
@@ -22,19 +22,15 @@ export function createRestdk(restdkOption) {
     }
     return res.data.data;
   });
-  const restdkApiMap = {};
-  for (const restdkName in project) {
-    const restdkApi = project[restdkName];
-    restdkApiMap[restdkName] = restdkApi((option) => {
-      return axios({
-        method: option.method,
-        url: parseUrlParam(option.url, option.param),
-        data: option.body,
-        params: option.query,
-      });
+  const restdkApi = project[appName];
+  return restdkApi((option) => {
+    return axios({
+      method: option.method,
+      url: parseUrlParam(option.url, option.param),
+      data: option.body,
+      params: option.query,
     });
-  }
-  return restdkApiMap as ProjectMap;
+  });
 }
 
 function parseUrlParam(url: string, param: any) {
