@@ -1,18 +1,20 @@
 import { Axios } from "axios";
 import * as project from "./api-service";
 
-type Project = typeof project;
-type ProjectKeys = keyof Project;
-type ProjectMap = {
-  [key in ProjectKeys]: ReturnType<Project[key]>;
+export type Project = typeof project;
+export type ProjectNames = keyof Project;
+export type ProjectMap = {
+  [key in ProjectNames]: ReturnType<Project[key]>;
 };
 
-export function createRestdk(appName: ProjectKeys, restdkOption) {
+export function createRestdk(appName: ProjectNames, restdkOption) {
   const axios = new Axios(restdkOption);
   axios.interceptors.request.use((config) => {
     return config;
   });
   axios.interceptors.response.use((res) => {
+    //TODO: 响应结果认证
+    //TODO: 认证API的Token处理
     if (Math.floor(res.status / 100) !== 2) {
       throw new Error(res.statusText);
     }
